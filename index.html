@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result Summary</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script defer src="logic.js"></script>
+  </head>
+  <body>
+    <main> 
+      <div id="result-div" class="flex-col">
+        <h1>Your Result</h1>
+        <div id="hero-circle">
+          <h1 id="scored">76</h1>
+          <p>of 100</p>
+        </div>
+        <div id="hero-text">
+            <h1>Great</h1>
+            <p>You scored higher than <span id="scoredHigher">65</span>% of the people who have taken these tests.</p>
+        </div>
+      </div>
+      <div id="summary-div" class="flex-col">
+        <h1>Summary</h1>
+        <div class="flex-col">
+        <div class="score-div">
+            <div class="img-div">
+                <img id="reaction-img" src="./assets/images/icon-reaction.svg" alt="reaction icon">
+                reaction
+            </div>
+            <div class="txt-div">
+              <span id="reaction-score">
+                80
+                <!-- <input type="number" id="reaction" value="80" min="0" max="100" step="1" class="input"> -->
+              </span> / 100
+            </div>
+        </div>
+        <div class="score-div">
+            <div class="img-div">
+                <img id="memory-img" src="./assets/images/icon-memory.svg" alt="memory icon">
+                memory
+            </div>
+            <div class="txt-div"><span id="memory-score">92</span> / 100</div>
+        </div>
+        <div class="score-div">
+            <div class="img-div">
+                <img id="verbal-img" src="./assets/images/icon-verbal.svg" alt="verbal icon">
+                verbal
+            </div>
+            <div class="txt-div"><span id="verbal-score">61</span> / 100</div>
+        </div>
+        <div class="score-div">
+            <div class="img-div">
+                <img id="visual-img" src="./assets/images/icon-visual.svg" alt="visual icon">
+                visual
+            </div>
+            <div class="txt-div"><span id="visual-score">72</span> / 100</div>
+        </div>
+
+        </div>
+        <button type="button" class="btn">continue</button>
+      </div>
+    </main>
+  </body>
+</html>

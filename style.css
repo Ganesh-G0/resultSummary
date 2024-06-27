@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+:root {
+    --light-red: hsl(0, 100%, 67%);
+    --orangey-yellow: hsl(39, 100%, 56%);
+    --green-teal: hsl(166, 100%, 37%);
+    --cobalt-blue: hsl(234, 85%, 45%);    
+    --white: hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 96%);
+    --light-lavender:hsl(241, 100%, 89%);
+    --dark-gray-blue: hsl(224, 30%, 27%);
+    --light-slate-blue:hsl(252, 100%, 67%);
+    --light-royal-blue: hsl(241, 81%, 54%);
+    --violet-blue: hsla(256, 72%, 46%, 1);
+    --persian-blue: hsla(241, 72%, 46%, 0);
+}
+::selection {
+    color: black;
+    background-color: white;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img {
+    display: block;
+    max-width: 100%;
+}
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+body {
+    min-height: 100dvh;
+    text-align: center;
+    font-size: calc(2rem + 1dvw);
+    background-color: var(--pale-blue);
+}
+.flex-col {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+}
+main {
+    gap: 2rem;
+    border: 1px sold red;
+    height: 100%;
+    display: grid;
+    background-color: var(--white);
+}
+#result-div {
+    gap: 3rem;
+    text-align: center;
+    color: var(--white);
+    padding: 2rem 2rem 4rem;
+    border-radius: 0 0 3rem 3rem;    
+    background-image: linear-gradient(var(--light-slate-blue), var(--light-royal-blue));
+}
+#result-div > h1 {
+    color: var(--pale-blue);
+    font-size: calc(2rem + 1dvw);
+}
+#hero-circle {
+    padding: 2rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-image: linear-gradient(var(--light-royal-blue), var(--light-slate-blue));
+}
+#hero-circle > p {
+    font-weight: 700;
+    color: var(--light-lavender);
+    font-size: calc(1.2rem + 1dvw);
+}
+#hero-text > h1 { font-size: calc(1.8rem + 1dvw); }
+#hero-text > p {
+    max-width: 32ch;
+    color: var(--light-lavender);    
+    font-size: calc(1.5rem + .5dvw);
+}
+/* --------------------------------------------summary div */
+#summary-div {
+    gap: 3rem;
+    padding: 2rem;
+    align-items: start;
+}
+#summary-div > h1 {
+    color: var(--dark-gray-blue);
+    font-size: calc(2rem + 1dvw);
+}
+.img-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.img-div > img {
+    width: calc(1.5rem + 1dvw);
+}
+#summary-div > div {
+    width: 100%;
+}
+.score-div {
+    text-transform: capitalize;
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: calc(1.5rem + 1dvw);
+    gap: 2rem;
+}
+.score-div:nth-of-type(1) {
+    color: var(--light-red);
+    background-color: hsla(0, 100%, 67%, 0.2);
+}
+.score-div:nth-of-type(2) {
+    color: var(--orangey-yellow);
+    background-color: hsla(39, 100%, 56%, 0.2);
+}
+.score-div:nth-of-type(3) {
+    color: var(--green-teal);
+    background-color: hsla(166, 100%, 37%, 0.2);
+}
+.score-div:nth-of-type(4) {
+    color: var(--cobalt-blue);
+    background-color: hsla(234, 85%, 45%, .2);
+}
+.btn {
+    width: 100%;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    border-radius: 6rem;
+    border: none;
+    font-size: calc(2rem + 1dvw);
+    color: var(--white);
+    background-color: var(--dark-gray-blue);
+    text-transform: capitalize;
+}
+@media(hover:hover) {
+    .btn:hover {
+        background-image: linear-gradient(0deg, var(--violet-blue), var(--light-royal-blue)) ;
+    }
+}
+@media(hover:none) {
+    .btn:active {
+        background-image: linear-gradient(var(--violet-blue), var(--light-royal-blue)) ;
+    }
+}
+@media (min-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    main {
+        gap: 0;
+        width: 90%;
+        max-width: 100rem;
+        grid-template-columns:  .9fr 1fr;
+        grid-template-areas: "res sum";
+        border-radius: 2rem;
+        box-shadow: .5rem .5rem .5rem var(--light-lavender);
+    }
+    #result-div { 
+        grid-area: res; 
+        border-radius: 2rem; 
+    }
+    #summary-div { 
+        grid-area: sum;
+        border-radius: 0 2rem 2rem 0;
+    }
+}
+
+
+
