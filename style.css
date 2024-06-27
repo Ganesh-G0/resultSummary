@@ -160,7 +160,7 @@ main {
     main {
         gap: 0;
         width: 90%;
-        max-width: 100rem;
+        max-width: 80rem;
         grid-template-columns:  .9fr 1fr;
         grid-template-areas: "res sum";
         border-radius: 2rem;
@@ -175,6 +175,3 @@ main {
         border-radius: 0 2rem 2rem 0;
     }
 }
-
-
-
